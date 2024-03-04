@@ -1,0 +1,27 @@
+{
+  "name": "fastify-framework-redis-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w",
+    "dev": "nodemon build/index.js",
+    "start": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/redis": "^6.1.1",
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1",
+    "mongoose": "^8.2.0",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.11.24",
+    "@types/pino": "^7.0.5",
+    "typescript": "^5.3.3"
+  }
+}
