@@ -25,7 +25,6 @@ server.register(db, {
 server.register(redis, {
     host: "localhost",
     port: 6379,
-    password: "password"
 });
 
 server.register(blogRoutes);
@@ -36,4 +35,7 @@ server.listen({ port: Port }, (err, address) => {
         process.exit(1);
     }
     server.log.info(`Server listening on ${address}`);
+    server.redis.get("blogs").then((res) => {
+        console.log(res);
+    });
 });
